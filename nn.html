@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lilas Angola</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0a;
+  color: white;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+/* HERO */
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(135deg, #8e44ad, #2c3e50);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #25D366;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* GALERIA */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* DEPOIMENTOS */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* ANIMAÇÃO SCROLL */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#produtos">Produtos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<header id="inicio">
+<h1>Lilas Angola</h1>
+<p>Elegância e sofisticação</p>
+
+<a class="btn" href="https://wa.me/244941011566">
+Falar no WhatsApp
+</a>
+</header>
+
+<section id="sobre" class="hidden">
+<h2>Sobre</h2>
+<p>Marca premium com produtos de alta qualidade.</p>
+</section>
+
+<section id="produtos" class="hidden">
+<h2>Produtos</h2>
+
+<div class="gallery">
+<img src="https://picsum.photos/400/300?1">
+<img src="https://picsum.photos/400/300?2">
+<img src="https://picsum.photos/400/300?3">
+<img src="https://picsum.photos/400/300?4">
+</div>
+</section>
+
+<section id="contacto" class="hidden">
+<h2>Contacto</h2>
+<p>Fale connosco pelo WhatsApp</p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/244941011566">💬</a>
+
+<script>
+const elements = document.querySelectorAll('.hidden');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

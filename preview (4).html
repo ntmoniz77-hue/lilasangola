@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lilas Angola</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0b0b12;
+  color: #fff;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(20,10,30,0.8);
+  backdrop-filter: blur(12px);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ddd;
+  margin: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #c084fc;
+}
+
+/* HERO */
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #7c3aed, #0b0b12);
+}
+
+header h1 {
+  font-size: 4rem;
+  color: #c084fc;
+  animation: fadeUp 1s ease;
+}
+
+header p {
+  max-width: 600px;
+  margin-top: 20px;
+  opacity: 0.85;
+}
+
+/* BOTÕES */
+.btn {
+  margin-top: 25px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe57;
+  transform: scale(1.05);
+}
+
+/* INSTAGRAM */
+.instagram-btn {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  color: white;
+}
+
+.instagram-btn:hover {
+  transform: scale(1.05);
+}
+
+/* SEÇÕES */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* STORY */
+.story {
+  background: #120d1c;
+  border-left: 4px solid #c084fc;
+  padding: 25px;
+  margin-top: 30px;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+/* PRODUTOS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.product {
+  background: #1a1325;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.product:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.product img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-content {
+  padding: 15px;
+}
+
+.product button {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+  background: #7c3aed;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.product button:hover {
+  background: #9333ea;
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: white;
+}
+
+/* ANIMAÇÃO */
+.fade {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #0a0a0f;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#historia">História</a>
+<a href="#produtos">Produtos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<header id="inicio">
+<h1>Lilas Angola</h1>
+<p>Mais que moda — identidade, elegância e presença.</p>
+
+<a class="btn whatsapp-btn" href="https://wa.me/244941011566">
+WhatsApp
+</a>
+
+<a class="btn instagram-btn" href="https://www.instagram.com/lilasangola/" target="_blank">
+Instagram
+</a>
+</header>
+
+<section id="historia" class="fade">
+<div class="container">
+
+<h2>Nossa História</h2>
+
+<div class="story">
+A Lilas Angola nasceu com a missão de transformar moda em identidade. Cada peça carrega mais do que estilo: carrega atitude, confiança e presença. Em um mundo onde todos querem parecer iguais, a Lilas surge para destacar o único — você. A nossa visão é simples: elevar a forma como as pessoas se expressam através da moda, com elegância, autenticidade e sofisticação em cada detalhe.
+</div>
+
+</div>
+</section>
+
+<section id="produtos" class="fade">
+<div class="container">
+
+<h2>Produtos</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520975954732-35dd22299614">
+<div class="product-content">
+<h3>Vestido Elegante</h3>
+<button onclick="pedir('Vestido Elegante')">Pedir</button>
+</div>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b">
+<div class="product-content">
+<h3>Look Casual</h3>
+<button onclick="pedir('Look Casual')">Pedir</button>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contacto" class="fade">
+<h2>Contacto</h2>
+
+<a class="btn whatsapp-btn" href="https://wa.me/244941011566">
+Falar no WhatsApp
+</a>
+
+</section>
+
+<a class="whatsapp-float" href="https://wa.me/244941011566">💬</a>
+
+<footer>
+© 2026 Lilas Angola
+</footer>
+
+<script>
+/* ANIMAÇÃO */
+const elements = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+});
+
+/* PEDIDOS */
+function pedir(produto) {
+  const numero = "244941011566";
+  const msg = `Olá! Quero comprar: ${produto}`;
+  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>
